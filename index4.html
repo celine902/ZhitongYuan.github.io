@@ -47,7 +47,7 @@
         }
 
         .nav-links {
-            display: flex;
+            display:极 flex;
             gap: 30px;
         }
 
@@ -126,14 +126,14 @@
         }
 
         .grid-item:hover .item-overlay {
-            opacity: 极1;
+            opacity: 1;
         }
 
         .project-title {
             font-size: 22px;
             font-weight: 500;
             margin-bottom: 5px;
-            color: #fff; /* 恢复为白色文字 */
+            color: #fff;
         }
 
         .project-category {
@@ -191,17 +191,17 @@
         .modal-info {
             max-width: 800px;
             margin: 0 auto 40px;
-            padding: 0; /* 移除内边距 */
-            background: none; /* 移除背景 */
-            border-radius: 0; /* 移除圆角 */
-            backdrop-filter: none; /* 移除模糊效果 */
+            padding: 0;
+            background: none;
+            border-radius: 0;
+            backdrop-filter: none;
         }
 
         .modal-title {
             font-size: 32px;
             margin-bottom: 15px;
             font-weight: 600;
-            color: #fff; /* 恢复为白色文字 */
+            color: #fff;
         }
 
         .modal-desc {
@@ -267,9 +267,9 @@
             max-height: 90vh;
             margin: 0 auto;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             padding: 40px;
         }
 
@@ -327,26 +327,17 @@
         /* 图片描述文字区域 - 优化样式 */
         .image-caption {
             width: 100%;
-            max-width: 800px;
-            margin: 20px auto 0;
-            text-align: left;
+            text-align: center;
             color: #fff;
-            padding: 0;
-            background: none;
-            border: none;
-        }
-
-        .image-title {
-            font-size: 18px;
-            font-weight: 500;
-            margin-bottom: 5px;
+            padding: 10px 0;
+            margin-top: 15px;
         }
 
         .image-desc {
-            font-size: 14px;
-            font-weight: 300;
-            opacity: 0.8;
-            line-height: 1.4;
+            font-size: 18px; /* 放大字号 */
+            font-weight: 400; /* 增加字重 */
+            opacity: 0.9; /* 提高可见性 */
+            line-height: 1.6; /* 增加行高 */
         }
 
         /* 页脚样式 */
@@ -443,8 +434,8 @@
                 right: 10px;
             }
             
-            .image-caption {
-                padding: 0 20px;
+            .image-desc {
+                font-size: 16px; /* 移动设备上稍小字号 */
             }
         }
     </style>
@@ -464,35 +455,35 @@
     <!-- 作品集网格布局 -->
     <section class="portfolio-grid" id="projects">
         <!-- 项目1 -->
-        <div class="grid-item" data-id="project1">
-            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D" alt="文化主题景观叙事" class="grid-img">
-            <div class="item-overlay">
-                <h3 class="project-title">文化主题景观叙事</h3>
-                <div class="project-category">岭南文化园博会设计</div>
-            </div>
-        </div>
-        
-        <!-- 项目2 -->
-        <div class="grid-item" data-id="project2">
-            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZGVzaWdufGVufDB8fDB8fHww" alt="在地博馆文化筑建" class="grid-img">
+         <div class="grid-item" data-id="project2">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMj极A3fDB8MHxzZWFyY2h8N3x8ZGVzaWdufGVufDB8fDB8fHww" alt="在地博馆文化筑建" class="grid-img">
             <div class="item-overlay">
                 <h3 class="project-title">在地博馆文化筑建</h3>
                 <div class="project-category">中草药博物馆</div>
             </div>
         </div>
         
-        <!-- 项目3 -->
-        <div class="grid-item" data-id="project3">
-            <img src="https://images.unsplash.com/photo-1467232004584-a241de8b46c3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3RyZWV0JTIwZGVzaWdufGVufDB8fDB8fHww" alt="历史街区活化再生" class="grid-img">
+        <!-- 项目2 -->
+         <div class="grid-item" data-id="project3">
+            <img src="https://s3.bmp.ovh/imgs/2025/07/12/ceb6cb58d96a5c26.png" alt="历史街区活化再生" class="grid-img">
             <div class="item-overlay">
                 <h3 class="project-title">历史街区活化再生</h3>
                 <div class="project-category">广州市犀牛路街道改造</div>
             </div>
         </div>
         
+        <!-- 项目3 -->
+         <div class="grid-item" data-id="project5">
+            <img src="https://youke1.picui.cn/s1/2025/07/12/687264b3b488f.png" alt="文教建筑空间营造" class="grid-img">
+            <div class="item-overlay">
+                <h3 class="project-title">文教建筑空间营造</h3>
+                <div class="project-category">广东工业大学展览馆设计</div>
+            </div>
+        </div>
+        
         <!-- 项目4 -->
         <div class="grid-item" data-id="project4">
-            <img src="https://images.unsplash.com/photo-1561070791-2526d45794b6?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTh8fGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D" alt="商业空间行为引导" class="grid-img">
+            <img src="https://youke1.picui.cn/s1/2025/07/12/6872679bf2314.jpg" alt="商业空间行为引导" class="grid-img">
             <div class="item-overlay">
                 <h3 class="project-title">商业空间行为引导</h3>
                 <div class="project-category">广州市东莞庄路段商业空间设计</div>
@@ -500,20 +491,20 @@
         </div>
         
         <!-- 项目5 -->
-        <div class="grid-item" data-id="project5">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGFja2FnaW5nfGVufDB8fDB8fHww" alt="文教建筑空间营造" class="grid-img">
+        <div class="grid-item" data-id="project1">
+            <img src="https://s3.bmp.ovh/imgs/2025/07/13/955a51f6218af630.png" alt="文化主题景观叙事" class="grid-img">
             <div class="item-overlay">
-                <h3 class="project-title">文教建筑空间营造</h3>
-                <div class="project-category">广东工业大学展览馆设计</div>
+                <h3 class="project-title">文化主题景观叙事</h3>
+                <div class="project-category">岭南文化园博会设计</div>
             </div>
         </div>
         
         <!-- 项目6 -->
         <div class="grid-item" data-id="project6">
-            <img src="https://images.unsplash.com/photo-1576595768827-6f4a70b5f7dc?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHBvc3RlcnxlbnwwfHwwfHx8MA%3D%3D" alt="可持续跨学科实践" class="grid-img">
+            <img src="https://youke1.picui.cn/s1/2025/07/12/6872607acf405.png" alt="可持续跨学科实践" class="grid-img">
             <div class="item-overlay">
                 <h3 class="project-title">可持续跨学科实践</h3>
-                <div class="project-category">可持续穿戴AI设计</div>
+                <div class="project-category">AIGC可穿戴式仿生设计</div>
             </div>
         </div>
     </section>
@@ -547,9 +538,8 @@
         <div class="image-modal-content">
             <img id="enlargedImg" class="image-modal-img" src="" alt="放大图片">
             
-            <!-- 图片描述文字区域 -->
+            <!-- 图片描述文字区域 - 只保留描述文字 -->
             <div class="image-caption">
-                <div id="imageTitle" class="image-title">图片标题</div>
                 <div id="imageDesc" class="image-desc">图片描述文字将在此处显示</div>
             </div>
         </div>
@@ -566,16 +556,10 @@
     <!-- 页脚/联系信息 -->
     <footer class="footer" id="contact">
         <div class="contact-info">
-            <h2>联系我们</h2>
+            <h2>联系我</h2>
             <p>邮件: 1658700677@qq.com</p>
             <p>电话: 13680160484</p>
             <p>地址: 创意设计中心, 数字城市</p>
-        </div>
-        <div class="social-links">
-            <a href="#" class="social-icon">fb</a>
-            <a href="#" class="social-icon">in</a>
-            <a href="#" class="social-icon">ig</a>
-            <a href="#" class="social-icon">tw</a>
         </div>
     </footer>
 
@@ -583,73 +567,148 @@
         // 项目详细信息
         const projects = {
             project1: {
-                title: "岭南文化园博会设计",
-                mainImg: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",
-                images: [
-                    {
-                        src: "https://images.unsplash.com/photo-1584634731339-252c581abfc5?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fHBhcmslMjBkZXNpZ258ZW58MHx8MHx8fDA%3D",
-                        title: "传统园林区",
-                        desc: "融合岭南传统建筑元素与现代景观设计"
-                    },
-                    {
-                        src: "https://images.unsplash.com/photo-1560703650-76bb0b481b15?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGdhcmRlbiUyMGRlc2lnbnxlbnwwfHwwfHx8MA%3D%3D",
-                        title: "水景生态区",
-                        desc: "生态水系统与本土植物群落设计"
-                    },
-                    {
-                        src: "https://images.unsplash.com/photo-1560717789-0ac7c58ac90a?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2hpbmVzZSUyMGdhcmRlbnxlbnwwfHwwfHx8MA%3D%3D",
-                        title: "现代艺术展示区",
-                        desc: "当代艺术装置与园林空间的对话"
-                    }
-                ],
-                desc: "岭南文化园博会设计项目融合了传统岭南园林艺术与现代景观设计理念，打造了一个集文化展示、休闲娱乐与生态保护于一体的公共空间。项目占地约5公顷，包含传统园林区、现代艺术展示区和水景生态区三大功能区。设计充分考虑了岭南地区的气候特点，采用大量本土植物和传统建筑材料，创造出既具有地域特色又符合现代审美的园林空间。",
-                date: "2023年6月完成"
-            },
-            project2: {
                 title: "中草药博物馆",
                 mainImg: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZGVzaWdufGVufDB8fDB8fHww",
                 images: [
                     {
                         src: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzZXVtJTIwZGVzaWdufGVufDB8fDB8fHww",
-                        title: "历史展区",
                         desc: "展示中国传统医药发展历程"
                     },
                     {
                         src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D",
-                        title: "药材标本区",
                         desc: "300多种中草药标本展示"
                     },
                     {
                         src: "https://images.unsplash.com/photo-1556228720-195a672e3a07?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVyYmFsJTIwZ2FyZGVufGVufDB8fDB8fHww",
-                        title: "互动体验区",
                         desc: "现代科技与传统医药的融合体验"
                     }
                 ],
                 desc: "中草药博物馆设计项目旨在展示中国传统医药文化的精髓。建筑外观采用现代解构主义手法，内部空间则融合了传统中药铺的元素与现代展览技术。博物馆分为历史展区、药材标本区、互动体验区和研究教育区四大功能区。设计特别注重空间氛围的营造，通过光影、材质和色彩的精心搭配，创造出既庄重又富有教育意义的展览环境。",
                 date: "2023年3月完成"
             },
-            project3: {
-                title: "广州市犀牛路街道改造",
-                mainImg: "https://images.unsplash.com/photo-1467232004584-a241de8b46c3?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3RyZWV0JTIwZGVzaWdufGVufDB8fDB8fHww",
+            project2: {
+                 title: "广州市犀牛路街道改造",
+                mainImg: "https://s3.bmp.ovh/imgs/2025/07/12/ceb6cb58d96a5c26.png",
                 images: [
                     {
-                        src: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXJiYW4lMjByZW5ld2FsfGVufDB8fDB8fHww",
-                        title: "历史建筑修缮",
+                        src: "https://s3.bmp.ovh/imgs/2025/07/12/a2241736b8855ae2.png",
                         desc: "保留原有风貌的修复工程"
                     },
                     {
-                        src: "https://images.unsplash.com/photo-1584634731339-252c581abfc5?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3f极DB8MHxzZWFyY2h8MTd8fHBhcmslMjBkZXNpZ258ZW58MHx8MHx8fDA%3D",
-                        title: "公共艺术装置",
+                        src: "https://s3.bmp.ovh/imgs/2025/07/12/85e645c5ad5023e7.png",
+                        desc: "保留原有风貌的修复工程"
+                    },
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/12/6c7553a8f4f34f41.png",
                         desc: "融合历史与现代的街头艺术"
                     },
                     {
-                        src: "https://images.unsplash.com/photo-1479839672679-a46483c0e7c8?w=1200&auto=format&fit=crop&q=60&ix极lib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cHVibGljJTIwc3BhY2V8ZW58MHx8MHx8fDA%3D",
-                        title: "步行系统升级",
+                        src: "https://s3.bmp.ovh/imgs/2025/07/12/5b35f29e88af7e5a.png",
+                        desc: "拓宽人行道，增加休息设施"
+                    },
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/12/d65dd4eaae2e3352.png",
                         desc: "拓宽人行道，增加休息设施"
                     }
                 ],
                 desc: "广州市犀牛路街道改造项目是对历史街区进行活化再生的典型案例。项目保留了原有的历史建筑风貌，同时引入了现代化的公共设施和商业空间。改造内容包括街道铺装更新、绿化系统升级、历史建筑修缮和公共艺术装置设置。设计特别注重步行体验，拓宽了人行道，增加了休息设施和景观节点，使整个街区既保留了历史韵味，又满足了现代城市生活的需求。",
                 date: "2025年6月完成"
+            },
+            project3: {
+                title: "广东工业大学展览馆设计",
+                mainImg: "https://youke1.picui.cn/s1/2025/07/12/687264b3b488f.png",
+                images: [
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/13/d5514f4c70a807a7.png",
+                        desc: "保留原有风貌的修复工程"
+                    },
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/13/f586c977d25334ac.png",
+                        desc: "保留原有风貌的修复工程"
+                    },
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/13/9d6f1351a435c06f.png",
+                        desc: "融合历史与现代的街头艺术"
+                    }               
+                ],
+                desc: "《木境共生》——以木饰面肌理为生态符号。",
+                date: "2025年5月完成"
+            },
+            project4: {
+                title: "广州市东莞庄路段商业空间设计",
+                mainImg: "https://youke1.picui.cn/s1/2025/07/12/6872679bf2314.jpg",
+                images: [
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/13/100103b9098bcb1f.jpg",
+                        desc: "保留原有风貌的修复工程"
+                    },
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/13/a3b0fd8e6e3a3f08.jpg",
+                        desc: "保留原有风貌的修复工程"
+                    }        
+                ],
+                desc: "《绿色科技赋能中小型购物商城——臻萃里》该中小型商场设计融合绿色科技，外观以绿色植被和玻璃幕墙为主，与环境和谐共生。技术层面，应用太阳能光伏板、雨水收集系统和高效节能空调等绿色科技，大幅降低能耗和碳排放。内部采用环保材料，确保空气清新。臻萃里展现了绿色科技与商业空间的完美结合。",
+                date: "2025年6月完成"
+            },
+            project5: {
+               title: "岭南文化园博会设计",
+                mainImg: "https://s3.bmp.ovh/imgs/2025/07/13/955a51f6218af630.png",
+                images: [
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/13/26077b565cfffdb9.png",
+                        desc: "融合岭南传统建筑元素与现代景观设计"
+                    },
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/13/cf9ab5bdf9b5aafc.png",
+                        desc: "生态水系统与本土植物群落设计"
+                    },
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/13/955a51f6218af630.png",
+                        desc: "生态水系统与本土植物群落设计"
+                    },
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/13/b83c8b37d099aead.png",
+                        desc: "当代艺术装置与园林空间的对话"
+                    },
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/13/60edefe9340eb379.png",
+                        desc: "当代艺术装置与园林空间的对话"
+                    }
+                ],
+                desc: "岭南文化园博会设计项目融合了传统岭南园林艺术与现代景观设计理念，打造了一个集文化展示、休闲娱乐与生态保护于一体的公共空间。项目占地约5公顷，包含传统园林区、现代艺术展示区和水景生态区三大功能区。设计充分考虑了岭南地区的气候特点，采用大量本土植物和传统建筑材料，创造出既具有地域特色又符合现代审美的园林空间。",
+                date: "2023年6月完成"
+            },
+            project6: {
+                title: "AIGC可穿戴式仿生设计",
+                mainImg: "https://youke1.picui.cn/s1/2025/07/12/6872607acf405.png",
+                images: [
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/12/9561c18706757f67.png",
+                        desc: "设计灵感来源于蝴蝶，设计中大量运用了金属材料，通过多变和梦幻的线条打造出极致的视觉盛宴。"
+                    },
+                    {
+                        src: "https://youke1.picui.cn/s1/2025/07/12/68725bd8e185c.png",
+                        desc: "设计灵感来源于蝴蝶，设计中大量运用了金属材料，通过多变和梦幻的线条打造出极致的视觉盛宴。"
+                    },
+                    {
+                        src: "https://youke1.picui.cn/s1/2025/07/12/68725c769e67c.png",
+                        desc: "设计灵感来源于蝴蝶，设计中大量运用了金属材料，通过多变和梦幻的线条打造出极致的视觉盛宴。"
+                    },
+                    {
+                        src: "https://youke1.picui.cn/s1/2025/07/12/68725c7654811.png",
+                        desc: "设计灵感来源于蜜蜂，细节部分使用了有机玻璃以增加设计的轻盈感和层次感。为了强调未来感和科技感，作品中也有部分嵌入LED灯光和光纤元件"
+                    },
+                    {
+                        src: "https://youke1.picui.cn/s1/2025/07/12/68725c758257e.png",
+                        desc: "设计灵感来源于水母，嵌入LED灯光和光纤元件，虽然主要部分是硬质材料，但部分佩戴区域仍然会使用柔软织物，以提高舒适度和可穿戴性。"
+                    },
+                    {
+                        src: "https://youke1.picui.cn/s1/2025/07/12/68726122a75f2.png",
+                        desc: "设计灵感来源于水母，嵌入LED灯光和光纤元件，虽然主要部分是硬质材料，但部分佩戴区域仍然会使用柔软织物，以提高舒适度和可穿戴性。"
+                    }
+                ],
+                desc: "《A-JEWEL》主题融合了仿生设计与未来虚拟时尚，呈现出有机生物与线条金属结合的高雅风格，科技与艺术的完美统一在此体现。设计灵感来源于蝴蝶、水母、蜜蜂，它们象征着自由、变化和生命的奇迹，通过抽象、多变和梦幻的线条打造出极致的视觉盛宴。",
+                date: "2024年4月完成"
             }
         };
 
@@ -669,7 +728,6 @@
         const closeImageModal = document.querySelector('.close-image-modal');
         const prevArrow = document.querySelector('.prev-arrow');
         const nextArrow = document.querySelector('.next-arrow');
-        const imageTitle = document.getElementById('imageTitle');
         const imageDesc = document.getElementById('imageDesc');
         
         // 图片导航状态
@@ -702,7 +760,7 @@
                         
                         const imgElement = document.createElement('img');
                         imgElement.src = img.src;
-                        imgElement.alt = img.title;
+                        imgElement.alt = img.desc;
                         imgElement.classList.add('gallery-img');
                         
                         // 添加点击事件监听器
@@ -726,14 +784,12 @@
             // 设置当前图片集合和索引
             currentImages = [{
                 src: project.mainImg,
-                title: project.title,
                 desc: "项目主图"
             }, ...project.images];
             currentIndex = index + 1; // +1 因为主图是第一个
             
             // 显示放大图片
             enlargedImg.src = currentImages[currentIndex].src;
-            imageTitle.textContent = currentImages[currentIndex].title;
             imageDesc.textContent = currentImages[currentIndex].desc;
             
             imageModal.style.display = 'block';
@@ -754,7 +810,6 @@
         // 更新放大图片
         function updateEnlargedImage() {
             enlargedImg.src = currentImages[currentIndex].src;
-            imageTitle.textContent = currentImages[currentIndex].title;
             imageDesc.textContent = currentImages[currentIndex].desc;
         }
         
@@ -809,7 +864,6 @@
                 if (project) {
                     showEnlargedImage({
                         src: project.mainImg,
-                        title: project.title,
                         desc: "项目主图"
                     }, project, 0);
                 }
