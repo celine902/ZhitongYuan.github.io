@@ -47,7 +47,7 @@
         }
 
         .nav-links {
-            display:极 flex;
+            display: flex;
             gap: 30px;
         }
 
@@ -143,7 +143,7 @@
             letter-spacing: 1px;
         }
 
-        /* 模态框样式 - 恢复原始设计 */
+        /* 模态框样式 */
         .modal {
             display: none;
             position: fixed;
@@ -187,14 +187,12 @@
             transform: scale(1.02);
         }
 
-        /* 项目信息区域 - 恢复原始设计（无背景边框） */
+        /* 项目信息区域 */
         .modal-info {
             max-width: 800px;
             margin: 0 auto 40px;
             padding: 0;
             background: none;
-            border-radius: 0;
-            backdrop-filter: none;
         }
 
         .modal-title {
@@ -217,7 +215,7 @@
             opacity: 0.7;
         }
 
-        /* 图片展示区域 - 在项目信息下方 */
+        /* 图片展示区域 */
         .image-gallery {
             width: 100%;
             margin-top: 50px;
@@ -274,9 +272,9 @@
         }
 
         .image-modal-img {
-            max-width: 100%;
-            max-height: 80vh;
-            object-fit: contain;
+            max-width: 90vw; /* 限制宽度不超过视口宽度的90% */
+            max-height: 80vh; /* 限制高度不超过视口高度的80% */
+            object-fit: contain; /* 保持比例并完整显示 */
             cursor: zoom-out;
         }
 
@@ -324,20 +322,21 @@
             color: #fff;
         }
 
-        /* 图片描述文字区域 - 优化样式 */
+        /* 图片描述文字区域 */
         .image-caption {
             width: 100%;
+            max-width: 800px;
+            margin: 20px auto 0;
             text-align: center;
             color: #fff;
-            padding: 10px 0;
-            margin-top: 15px;
+            padding: 0;
         }
 
         .image-desc {
-            font-size: 18px; /* 放大字号 */
-            font-weight: 400; /* 增加字重 */
-            opacity: 0.9; /* 提高可见性 */
-            line-height: 1.6; /* 增加行高 */
+            font-size: 18px;
+            font-weight: 400;
+            opacity: 0.9;
+            line-height: 1.6;
         }
 
         /* 页脚样式 */
@@ -366,7 +365,7 @@
         }
 
         .social-icon {
-            width: 40px;
+            width极: 40px;
             height: 40px;
             border-radius: 50%;
             border: 1px solid var(--primary-color);
@@ -430,12 +429,13 @@
                 left: 10px;
             }
             
-            .next-arrow {
-                right: 10px;
+            .image-caption {
+                padding: 0 20px;
             }
             
-            .image-desc {
-                font-size: 16px; /* 移动设备上稍小字号 */
+            /* 移动设备上进一步限制图片大小 */
+            .image-modal-img {
+                max-height: 60vh;
             }
         }
     </style>
@@ -454,17 +454,8 @@
 
     <!-- 作品集网格布局 -->
     <section class="portfolio-grid" id="projects">
-        <!-- 项目1 -->
-         <div class="grid-item" data-id="project2">
-            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMj极A3fDB8MHxzZWFyY2h8N3x8ZGVzaWdufGVufDB8fDB8fHww" alt="在地博馆文化筑建" class="grid-img">
-            <div class="item-overlay">
-                <h3 class="project-title">在地博馆文化筑建</h3>
-                <div class="project-category">中草药博物馆</div>
-            </div>
-        </div>
-        
-        <!-- 项目2 -->
-         <div class="grid-item" data-id="project3">
+        <!-- 项目2: 广州市犀牛路街道改造 -->
+        <div class="grid-item" data-id="project2">
             <img src="https://s3.bmp.ovh/imgs/2025/07/12/ceb6cb58d96a5c26.png" alt="历史街区活化再生" class="grid-img">
             <div class="item-overlay">
                 <h3 class="project-title">历史街区活化再生</h3>
@@ -472,36 +463,27 @@
             </div>
         </div>
         
-        <!-- 项目3 -->
-         <div class="grid-item" data-id="project5">
-            <img src="https://youke1.picui.cn/s1/2025/07/12/687264b3b488f.png" alt="文教建筑空间营造" class="grid-img">
+        <!-- 项目3: 广东工业大学展览馆设计 -->
+        <div class="grid-item" data-id="project3">
+            <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAIxR2hzy5JrGhctp8sUBPh7s8sEyMAAA9YZAAJ4g6BXl4BWecPudKo2BA.png" alt="文教建筑空间营造" class="grid-img">
             <div class="item-overlay">
                 <h3 class="project-title">文教建筑空间营造</h3>
                 <div class="project-category">广东工业大学展览馆设计</div>
             </div>
         </div>
         
-        <!-- 项目4 -->
+        <!-- 项目4: 广州市东莞庄路段商业空间设计 -->
         <div class="grid-item" data-id="project4">
-            <img src="https://youke1.picui.cn/s1/2025/07/12/6872679bf2314.jpg" alt="商业空间行为引导" class="grid-img">
+            <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAIxRmhzyxClZuB4N9xIb8UqdK570iQpAALLGQACeIOgVzeHSm9mkDGnNgQ.jpg" alt="商业空间行为引导" class="grid-img">
             <div class="item-overlay">
                 <h3 class="project-title">商业空间行为引导</h3>
                 <div class="project-category">广州市东莞庄路段商业空间设计</div>
             </div>
         </div>
         
-        <!-- 项目5 -->
-        <div class="grid-item" data-id="project1">
-            <img src="https://s3.bmp.ovh/imgs/2025/07/13/955a51f6218af630.png" alt="文化主题景观叙事" class="grid-img">
-            <div class="item-overlay">
-                <h3 class="project-title">文化主题景观叙事</h3>
-                <div class="project-category">岭南文化园博会设计</div>
-            </div>
-        </div>
-        
-        <!-- 项目6 -->
+        <!-- 项目6: AIGC可穿戴式仿生设计 -->
         <div class="grid-item" data-id="project6">
-            <img src="https://youke1.picui.cn/s1/2025/07/12/6872607acf405.png" alt="可持续跨学科实践" class="grid-img">
+            <img src="https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAIxO2hzx3ZEcR4vtWar0zl4qPY-8_t_AAKnGQACeIOgVy82U7n3PAqJNgQ.png" alt="可持续跨学科实践" class="grid-img">
             <div class="item-overlay">
                 <h3 class="project-title">可持续跨学科实践</h3>
                 <div class="project-category">AIGC可穿戴式仿生设计</div>
@@ -513,21 +495,14 @@
     <div id="projectModal" class="modal">
         <span class="close-modal">&times;</span>
         <div class="modal-content">
-            <!-- 项目主图 -->
             <img id="modalMainImg" class="modal-img" src="" alt="项目主图">
-            
-            <!-- 项目信息区域 -->
             <div class="modal-info">
                 <h2 id="modalTitle" class="modal-title">项目名称</h2>
                 <p id="modalDesc" class="modal-desc">项目详细描述将在此处展示...</p>
                 <p id="modalDate" class="modal-date">2023</p>
             </div>
-            
-            <!-- 图片展示区域 -->
             <div class="image-gallery">
-                <div id="galleryGrid" class="gallery-grid">
-                    <!-- 图片将通过JavaScript动态添加 -->
-                </div>
+                <div id="galleryGrid" class="gallery-grid"></div>
             </div>
         </div>
     </div>
@@ -537,14 +512,10 @@
         <span class="close-image-modal">&times;</span>
         <div class="image-modal-content">
             <img id="enlargedImg" class="image-modal-img" src="" alt="放大图片">
-            
-            <!-- 图片描述文字区域 - 只保留描述文字 -->
             <div class="image-caption">
                 <div id="imageDesc" class="image-desc">图片描述文字将在此处显示</div>
             </div>
         </div>
-        
-        <!-- 导航箭头 -->
         <div class="nav-arrow prev-arrow">
             <span class="arrow-icon">←</span>
         </div>
@@ -559,36 +530,16 @@
             <h2>联系我</h2>
             <p>邮件: 1658700677@qq.com</p>
             <p>电话: 13680160484</p>
-            <p>地址: 创意设计中心, 数字城市</p>
+            <p>地址: 广东工业大学艺术与设计学院</p>
         </div>
     </footer>
 
     <script>
         // 项目详细信息
         const projects = {
-            project1: {
-                title: "中草药博物馆",
-                mainImg: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8ZGVzaWdufGVufDB8fDB8fHww",
-                images: [
-                    {
-                        src: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bXVzZXVtJTIwZGVzaWdufGVufDB8fDB8fHww",
-                        desc: "展示中国传统医药发展历程"
-                    },
-                    {
-                        src: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aW50ZXJpb3IlMjBkZXNpZ258ZW58MHx8MHx8fDA%3D",
-                        desc: "300多种中草药标本展示"
-                    },
-                    {
-                        src: "https://images.unsplash.com/photo-1556228720-195a672e3a07?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8aGVyYmFsJTIwZ2FyZGVufGVufDB8fDB8fHww",
-                        desc: "现代科技与传统医药的融合体验"
-                    }
-                ],
-                desc: "中草药博物馆设计项目旨在展示中国传统医药文化的精髓。建筑外观采用现代解构主义手法，内部空间则融合了传统中药铺的元素与现代展览技术。博物馆分为历史展区、药材标本区、互动体验区和研究教育区四大功能区。设计特别注重空间氛围的营造，通过光影、材质和色彩的精心搭配，创造出既庄重又富有教育意义的展览环境。",
-                date: "2023年3月完成"
-            },
             project2: {
-                 title: "广州市犀牛路街道改造",
-                mainImg: "https://s3.bmp.ovh/imgs/2025/07/12/ceb6cb58d96a5c26.png",
+                title: "广州市犀牛路街道改造",
+                 mainImg: "https://s3.bmp.ovh/imgs/2025/07/12/ceb6cb58d96a5c26.png",
                 images: [
                     {
                         src: "https://s3.bmp.ovh/imgs/2025/07/12/a2241736b8855ae2.png",
@@ -596,114 +547,98 @@
                     },
                     {
                         src: "https://s3.bmp.ovh/imgs/2025/07/12/85e645c5ad5023e7.png",
-                        desc: "保留原有风貌的修复工程"
+                        desc: "为骑手设计可躺卧式的隐私空间"
                     },
                     {
                         src: "https://s3.bmp.ovh/imgs/2025/07/12/6c7553a8f4f34f41.png",
-                        desc: "融合历史与现代的街头艺术"
+                        desc: "与居民休息区空间上分割开的骑手休息区"
                     },
                     {
                         src: "https://s3.bmp.ovh/imgs/2025/07/12/5b35f29e88af7e5a.png",
-                        desc: "拓宽人行道，增加休息设施"
+                        desc: "工具借用区、应急服务区、茶歇区"
                     },
                     {
                         src: "https://s3.bmp.ovh/imgs/2025/07/12/d65dd4eaae2e3352.png",
-                        desc: "拓宽人行道，增加休息设施"
+                        desc: "儿童阅读场所"
                     }
                 ],
-                desc: "广州市犀牛路街道改造项目是对历史街区进行活化再生的典型案例。项目保留了原有的历史建筑风貌，同时引入了现代化的公共设施和商业空间。改造内容包括街道铺装更新、绿化系统升级、历史建筑修缮和公共艺术装置设置。设计特别注重步行体验，拓宽了人行道，增加了休息设施和景观节点，使整个街区既保留了历史韵味，又满足了现代城市生活的需求。",
+                desc: "广州市犀牛路街道改造其中一个项目《暖心能量站》，既是城市骑手的温馨避风港，也是街道居民友好服务场所。通过实地访谈得出结论：大部分骑手都是停在路边休息，认为充电、饮水、洗手间是最重要的三大补给；居民认为提供热水、雨具、充电、微波炉、急救箱、工具借用服务可以帮助到自己。结合骑手与居民需求建设暖心能量站，使用空间上一体化但两者隐私可得到满足。",
                 date: "2025年6月完成"
             },
             project3: {
                 title: "广东工业大学展览馆设计",
-                mainImg: "https://youke1.picui.cn/s1/2025/07/12/687264b3b488f.png",
+                mainImg: "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAIxR2hzy5JrGhctp8sUBPh7s8sEyMAAA9YZAAJ4g6BXl4BWecPudKo2BA.png",
                 images: [
                     {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/15/795fb845ef193044.jpg",
+                        desc: "原场地1"
+                    },
+                     {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/15/41a2646a35d6cf98.jpg",
+                        desc: "原场地2"
+                    },
+                    {
+                        src: "https://s3.bmp.ovh/imgs/2025/07/15/9ea3b5161b0df17c.jpg",
+                        desc: "原场地3"
+                    },
+                    {
                         src: "https://s3.bmp.ovh/imgs/2025/07/13/d5514f4c70a807a7.png",
-                        desc: "保留原有风貌的修复工程"
+                        desc: "设计了一个具有连接作用的门洞。不仅可以分隔空间，还具有引导作用，营造氛围。"
                     },
                     {
                         src: "https://s3.bmp.ovh/imgs/2025/07/13/f586c977d25334ac.png",
-                        desc: "保留原有风貌的修复工程"
+                        desc: "模块化人造板烤漆方形展台。可随意组合形状，满足展览需求。"
                     },
                     {
                         src: "https://s3.bmp.ovh/imgs/2025/07/13/9d6f1351a435c06f.png",
-                        desc: "融合历史与现代的街头艺术"
-                    }               
+                        desc: "矩形实木格栅环形隔间，用于布置服装设计专业作品。"
+                    }
                 ],
-                desc: "《木境共生》——以木饰面肌理为生态符号。",
+                desc: "《木境共生》——以木饰面肌理为生态符号。作为可持续材料与空间叙事的实验场，希望以木头的温度和质感唤醒人们对自然的敬畏情感，以感受生命的力量引发观者对环境、生命的深度思考。解决了原场地空旷没有规划人流动线、光线分布过于均匀无法区分主次、建筑外立面老旧缺乏特色等问题。",
                 date: "2025年5月完成"
             },
             project4: {
                 title: "广州市东莞庄路段商业空间设计",
-                mainImg: "https://youke1.picui.cn/s1/2025/07/12/6872679bf2314.jpg",
+                mainImg: "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAIxRmhzyxClZuB4N9xIb8UqdK570iQpAALLGQACeIOgVzeHSm9mkDGnNgQ.jpg",
                 images: [
                     {
                         src: "https://s3.bmp.ovh/imgs/2025/07/13/100103b9098bcb1f.jpg",
-                        desc: "保留原有风貌的修复工程"
+                        desc: "《绿色科技赋能中小型购物商城——臻萃里》展板"
                     },
                     {
                         src: "https://s3.bmp.ovh/imgs/2025/07/13/a3b0fd8e6e3a3f08.jpg",
-                        desc: "保留原有风貌的修复工程"
+                        desc: "《绿色科技赋能中小型购物商城——臻萃里》展板"
                     }        
                 ],
                 desc: "《绿色科技赋能中小型购物商城——臻萃里》该中小型商场设计融合绿色科技，外观以绿色植被和玻璃幕墙为主，与环境和谐共生。技术层面，应用太阳能光伏板、雨水收集系统和高效节能空调等绿色科技，大幅降低能耗和碳排放。内部采用环保材料，确保空气清新。臻萃里展现了绿色科技与商业空间的完美结合。",
-                date: "2025年6月完成"
-            },
-            project5: {
-               title: "岭南文化园博会设计",
-                mainImg: "https://s3.bmp.ovh/imgs/2025/07/13/955a51f6218af630.png",
-                images: [
-                    {
-                        src: "https://s3.bmp.ovh/imgs/2025/07/13/26077b565cfffdb9.png",
-                        desc: "融合岭南传统建筑元素与现代景观设计"
-                    },
-                    {
-                        src: "https://s3.bmp.ovh/imgs/2025/07/13/cf9ab5bdf9b5aafc.png",
-                        desc: "生态水系统与本土植物群落设计"
-                    },
-                    {
-                        src: "https://s3.bmp.ovh/imgs/2025/07/13/955a51f6218af630.png",
-                        desc: "生态水系统与本土植物群落设计"
-                    },
-                    {
-                        src: "https://s3.bmp.ovh/imgs/2025/07/13/b83c8b37d099aead.png",
-                        desc: "当代艺术装置与园林空间的对话"
-                    },
-                    {
-                        src: "https://s3.bmp.ovh/imgs/2025/07/13/60edefe9340eb379.png",
-                        desc: "当代艺术装置与园林空间的对话"
-                    }
-                ],
-                desc: "岭南文化园博会设计项目融合了传统岭南园林艺术与现代景观设计理念，打造了一个集文化展示、休闲娱乐与生态保护于一体的公共空间。项目占地约5公顷，包含传统园林区、现代艺术展示区和水景生态区三大功能区。设计充分考虑了岭南地区的气候特点，采用大量本土植物和传统建筑材料，创造出既具有地域特色又符合现代审美的园林空间。",
-                date: "2023年6月完成"
+                date: "2025年3月完成"
             },
             project6: {
                 title: "AIGC可穿戴式仿生设计",
-                mainImg: "https://youke1.picui.cn/s1/2025/07/12/6872607acf405.png",
+                 mainImg: "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAIxO2hzx3ZEcR4vtWar0zl4qPY-8_t_AAKnGQACeIOgVy82U7n3PAqJNgQ.png",
                 images: [
+                    {
+                        src: "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAIxOWhzxnjvBHxtcAbRlzGTIOYg9TeTAAKeGQACeIOgV1xhme4jGPrINgQ.png",
+                        desc: "《A-JEWEL》展板"
+                    },
                     {
                         src: "https://s3.bmp.ovh/imgs/2025/07/12/9561c18706757f67.png",
                         desc: "设计灵感来源于蝴蝶，设计中大量运用了金属材料，通过多变和梦幻的线条打造出极致的视觉盛宴。"
-                    },
+                    },          
                     {
-                        src: "https://youke1.picui.cn/s1/2025/07/12/68725bd8e185c.png",
+                        src: "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAIxPGhzyQqM5Tv6xPcf4tMn3P6p_7PVAAKrGQACeIOgV91GaeBmxa7yNgQ.png",
                         desc: "设计灵感来源于蝴蝶，设计中大量运用了金属材料，通过多变和梦幻的线条打造出极致的视觉盛宴。"
                     },
                     {
-                        src: "https://youke1.picui.cn/s1/2025/07/12/68725c769e67c.png",
-                        desc: "设计灵感来源于蝴蝶，设计中大量运用了金属材料，通过多变和梦幻的线条打造出极致的视觉盛宴。"
-                    },
-                    {
-                        src: "https://youke1.picui.cn/s1/2025/07/12/68725c7654811.png",
+                        src: "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAIxPWhzyRx_NAlf1DJt5WyZNUGpj8zeAAKsGQACeIOgVzqw53iksjmANgQ.png",
                         desc: "设计灵感来源于蜜蜂，细节部分使用了有机玻璃以增加设计的轻盈感和层次感。为了强调未来感和科技感，作品中也有部分嵌入LED灯光和光纤元件"
                     },
                     {
-                        src: "https://youke1.picui.cn/s1/2025/07/12/68725c758257e.png",
+                        src: "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAIxPmhzySqf9FaLC97hEt5AE8dAFZMeAAKtGQACeIOgV87bQ_7ESTv1NgQ.png",
                         desc: "设计灵感来源于水母，嵌入LED灯光和光纤元件，虽然主要部分是硬质材料，但部分佩戴区域仍然会使用柔软织物，以提高舒适度和可穿戴性。"
                     },
                     {
-                        src: "https://youke1.picui.cn/s1/2025/07/12/68726122a75f2.png",
+                        src: "https://img.remit.ee/api/file/BQACAgUAAyEGAASHRsPbAAIxP2hzySsU8GBY_BKfz-S1hWK0v47wAAKuGQACeIOgV4Pc1UYC17syNgQ.png",
                         desc: "设计灵感来源于水母，嵌入LED灯光和光纤元件，虽然主要部分是硬质材料，但部分佩戴区域仍然会使用柔软织物，以提高舒适度和可穿戴性。"
                     }
                 ],
@@ -799,19 +734,15 @@
         // 导航箭头功能
         prevArrow.addEventListener('click', () => {
             currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
-            updateEnlargedImage();
+            enlargedImg.src = currentImages[currentIndex].src;
+            imageDesc.textContent = currentImages[currentIndex].desc;
         });
         
         nextArrow.addEventListener('click', () => {
             currentIndex = (currentIndex + 1) % currentImages.length;
-            updateEnlargedImage();
-        });
-        
-        // 更新放大图片
-        function updateEnlargedImage() {
             enlargedImg.src = currentImages[currentIndex].src;
             imageDesc.textContent = currentImages[currentIndex].desc;
-        }
+        });
         
         // 关闭模态框
         function closeProjectModal() {
